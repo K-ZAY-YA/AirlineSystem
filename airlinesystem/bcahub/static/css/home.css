@@ -84,8 +84,7 @@ table{
 }
 td:nth-child(n + 2){
     border-left: 1px solid black;
-    /* border-right: 1px solid black; */
-    
+    /* border-right: 1px solid black; */ 
 }
 th{
     background-color: #6792E7;
