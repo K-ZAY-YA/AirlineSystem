@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit</title>
+    <script src="https://kit.fontawesome.com/c4dbab3247.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/airlineedit.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <h1>Airline Update</h1>
+    </nav>
+    
+    <a href="{% url 'airline' %}" class="backicon"><i class="fa-solid fa-backward"></i></a>
+    <div class="container">
+      <form action="{% url 'updateairline' airline.pk %}" method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="Operating Date" placeholder="Operating Date" />
+
+        <input type="text" name="Airline Name" placeholder="Airline Name" />
+
+        <input type="number" name="Airline Number" placeholder="Airline Number" />
+
+        <input type="text" name="Depature Port" placeholder="Depature Port" />
+
+        <input type="text" name="Arrival Port" placeholder="Arrival Port" />
+
+        <input type="text" name="Depature Date and Time" placeholder="Depature Date and Time" />
+
+        <input type="text" name="Arrival Date and Time" placeholder="Arrival Date and Time" />
+
+        <input type="text" name="Flight Status" placeholder="Flight Status" />
+
+        <input type="text" name="Delay issue" placeholder="Delay issue" />
+
+        <input type="text" name="Remarks" placeholder="Remarks" />
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </body>
+</html>
