@@ -51,16 +51,16 @@
         <tbody class="tbody2">
           {% for travels in travels %}
             <tr>
-              <td style="border-bottom-left-radius: 10px;">{{ travel.Flight }}</td>
-              <td>{{ travels.TimeFrame }}</td>
-              <td>{{ travels.Name }}</td>
-              <td>{{ travels.DOB }}</td>
-              <td>{{ travels.NRC }}</td>
-              <td>{{ travels.Gender }}</td>
-              <td>{{ travels.Depature_Port }}</td>
-              <td>{{ travels.Depature_Date_time }}</td>
-              <td>{{ travels.Arrival_Port }}</td>
-              <td>{{ travels.Arrival_Date_Time }}</td>
+              <td style="border-bottom-left-radius: 10px;">{{ travel.flight }}</td>
+              <td>{{ travels.timeFrame }}</td>
+              <td>{{ travels.name }}</td>
+              <td>{{ travels.dob }}</td>
+              <td>{{ travels.nrc }}</td>
+              <td>{{ travels.gender }}</td>
+              <td>{{ travels.depature_port }}</td>
+              <td>{{ travels.depature_date_time }}</td>
+              <td>{{ travels.arrival_port }}</td>
+              <td>{{ travels.arrival_date_time }}</td>
               <td style="border-bottom-right-radius: 10px;">
                 <a href="{% url 'edithome' travels.pk %}"><i class="fa-regular fa-pen-to-square"></i></a> <a href="{% url 'delethome' travels.pk %}"><i class="fa-solid fa-trash"></i></a>
               </td>

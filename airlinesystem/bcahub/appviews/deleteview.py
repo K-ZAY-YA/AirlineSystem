@@ -5,7 +5,7 @@ from django.contrib import messages
 
 def airlinedelete(request, pk):
     try:
-        airline = Airline.objects.get(pk=pk)
+        airline = Airline.objects.get(id=pk)
         airline.delete()
         messages.success(request, "Airline deleted Successfully")
     except Airline.DoesNotExist:
@@ -14,7 +14,7 @@ def airlinedelete(request, pk):
 
 def homedelete(request, pk):
     try:
-        travels = Traveller.objects.get(pk=pk)
+        travels = Traveller.objects.get(id=pk)
         travels.delete()
         messages.success(request, "Traveller Deleted Successfully")
     except Traveller.DoesNotExist:
@@ -23,7 +23,7 @@ def homedelete(request, pk):
 
 def crewdelete(request, pk):
     try:
-        crew = Crew.objects.get(pk=pk)
+        crew = Crew.objects.get(id=pk)
         crew.delete()
         messages.success(request, "Crew deleted Successfully")
     except Crew.DoesNotExist:
@@ -33,7 +33,7 @@ def crewdelete(request, pk):
 
 def journeydelete(request, pk):
     try:
-        journey = journeysearch.objects.get(pk=pk)
+        journey = journeysearch.objects.get(id=pk)
         journey.delete()
         messages.success(request, "Journey deleted Successfully")
     except Crew.DoesNotExist:
@@ -43,7 +43,7 @@ def journeydelete(request, pk):
 
 def riskdelete(request, pk):
     try:
-        risk = Riskaction.objects.get(pk=pk)
+        risk = Riskaction.objects.get(id=pk)
         risk.delete()
         messages.success(request, 'Risk Deleted Successfully')
     except Riskaction.DoesNotExist:

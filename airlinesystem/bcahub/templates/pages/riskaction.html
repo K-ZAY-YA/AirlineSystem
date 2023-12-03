@@ -47,29 +47,30 @@
           <th>Status</th>
           <th style="border-top-right-radius: 10px;">Action</th>
         </thead>
+        {% for risks in risks %}
         <tbody class="tbody2">
-          {% for risks in risks %}
-              <tr>
-                  <td style="border-bottom-left-radius: 10px;">{{ risk.No }}</td>
-                  <td>{{ risk.Name }}</td>
-                  <td>{{ risk.DOB }}</td>
-                  <td>{{ risk.Father }}</td>
-                  <td>{{ risk.Passport }}</td>
-                  <td>{{ risk.Gender }}</td>
-                  <td>{{ risk.FlightName }}</td>
-                  <td>{{ risk.sector }}</td>
-                  <td>{{ risk.Depature_Date_time }}</td>
-                  <td>{{ risk.Status }}</td>
-                  <td style="border-bottom-right-radius: 10px;">
-                      <a href="{% url 'editrisk' risks.pk %}"><i class="fa-regular fa-pen-to-square"></i></a>
-                      <a href="{% url 'deleterisk' risks.pk %}"><i class="fa-solid fa-trash"></i></a>
-                  </td>
-              </tr>
-          {% endfor %}
+          <tr>
+            <td style="border-bottom-left-radius: 10px;">{{ risk.no }}</td>
+            <td>{{ risk.name }}</td>
+            <td>{{ risk.dob }}</td>
+            <td>{{ risk.father }}</td>
+            <td>{{ risk.passport }}</td>
+            <td>{{ risk.gender }}</td>
+            <td>{{ risk.flightname }}</td>
+            <td>{{ risk.sector }}</td>
+            <td>{{ risk.depature_date_time }}</td>
+            <td>{{ risk.status }}</td>
+            <td style="border-bottom-right-radius: 10px;">
+                <a href="{% url 'editrisk' risks.pk %}"><i class="fa-regular fa-pen-to-square"></i></a>
+                <a href="{% url 'deleterisk' risks.pk %}"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
       </tbody>
-      
       </table>
+      <br>
       <a href="{%  url 'createrisk' %}" class="plusbtn">Add Data to table<i style="text-align: right;" class="fa-solid fa-plus"></i></a>
     </div>
   </body>
 </html>
+

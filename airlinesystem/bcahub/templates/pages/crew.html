@@ -48,13 +48,13 @@
         {% for crews in crews %}
         <tbody class="tbody2">
           <tr style="padding: 10px;">
-            <td>{{crews.Flight}}</td>
-            <td>{{crews.Service_status}}</td>
-            <td>{{crews.Name}}</td>
-            <td>{{crews.Depature_Port}}</td>
-            <td>{{crews.Arrival_Port}}</td>
-            <td>{{crews.Depature_Date_time}}</td>
-            <td>{{crews.Arrival_Date_Time}}</td>
+            <td>{{crews.flight}}</td>
+            <td>{{crews.service_status}}</td>
+            <td>{{crews.name}}</td>
+            <td>{{crews.depature_port}}</td>
+            <td>{{crews.arrival_port}}</td>
+            <td>{{crews.depature_date_time}}</td>
+            <td>{{crews.arrival_date_time}}</td>
             <td style="border-bottom-right-radius: 10px;">
               <a href="{% url 'editcrew' crews.pk %}"><i class="fa-regular fa-pen-to-square"></i></a> <a href="{% url 'deletecrew' crews.pk %}"><i class="fa-solid fa-trash"></i></a>
             </td>

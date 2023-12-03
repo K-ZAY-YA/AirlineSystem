@@ -39,7 +39,7 @@
             {% if messages %}
     <ul class="messages">
       {% for message in messages %}
-        <div class="alert alert-primary" role="alert">{{ message }}</div>
+        <div class="alert alert-primary" role="alert">{{ message}}</div>
       {% endfor %}
     </ul>
   {% endif %}
@@ -60,17 +60,17 @@
             {% for journeys in journeys %}
             <tbody class="tbody2">
             <tr>
-                <td style="border-bottom-left-radius: 10px;">{{journey.No}}</td>
-                <td>{{journey.Name}}</td>
-                <td>{{journey.DOB}}</td>
-                <td>{{journey.Father}}</td>
-                <td>{{journey.Passport}}</td>
-                <td>{{journey.Gender}}</td>
-                <td>{{journey.FlightName}}</td>
+                <td style="border-bottom-left-radius: 10px;">{{journey.no}}</td>
+                <td>{{journey.name}}</td>
+                <td>{{journey.dob}}</td>
+                <td>{{journey.father}}</td>
+                <td>{{journey.passport}}</td>
+                <td>{{journey.gender}}</td>
+                <td>{{journey.flight_name}}</td>
                 <td>{{journey.sector}}</td>
-                <td>{{journey.Depature_Date_time}}</td>
-                <td>{{journey.Arrival_Date_Time}}</td>
-                <td>{{journey.Risk_Satus}}</td>
+                <td>{{journey.depature_date_time}}</td>
+                <td>{{journey.arrival_date_time}}</td>
+                <td>{{journey.risk_satus}}</td>
                 <td style="border-bottom-right-radius: 10px;"><a href="{% url 'editjoureny' journeys.pk %}"><i class="fa-regular fa-pen-to-square"></i></a> <a href="{% url 'deletejourney' journeys.pk %}"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>

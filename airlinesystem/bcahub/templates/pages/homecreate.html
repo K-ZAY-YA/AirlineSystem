@@ -25,27 +25,16 @@
     <div class="container">
         <form action="{% url  'createhome' %}" method="POST">
             {% csrf_token %}
-            
-            <input type="text" placeholder="Flight">
-            
-            <input type="text" id="airline" placeholder="TimeFrame">
-            
-            <input type="text" id="name" placeholder="Name">
-    
-            <input type="date" placeholder="D.O.B">
-            
-            <input type="text" placeholder="NRC">
-            
-            <input type="text" placeholder="Gender">
-            
-            <input type="text" placeholder="Depature Port">
-            
-            <input type="datetime" placeholder="Depature Date and Time">
-            
-            <input type="text" placeholder="Arrival Port">
-            
-            <input type="datetime" placeholder="Arrival Date and Time">
-           
+            <input type="text" name="flight" placeholder="Flight">          
+            <input type="text" name="timeframe"  placeholder="TimeFrame">           
+            <input type="text" name="name"  placeholder="Name">    
+            <input type="date" name="dob" placeholder="D.O.B">            
+            <input type="text" name="nrc" placeholder="NRC">            
+            <input type="text" name="gender" placeholder="Gender">            
+            <input type="text"  name="depature_port" placeholder="Depature Port">            
+            <input type="datetime" name="depature_date_and_time" placeholder="Depature Date and Time">            
+            <input type="text" name="arrival_port" placeholder="Arrival Port">            
+            <input type="datetime" name="arrival_date_and_time" placeholder="Arrival Date and Time">           
             <button type="submit">Create</button>
         </form>
     </div>

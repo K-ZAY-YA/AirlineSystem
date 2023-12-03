@@ -18,25 +18,25 @@
       <form action="{% url 'updateairline' airline.pk %}" method="POST">
         {% csrf_token %}
 
-        <input type="text" name="Operating Date" placeholder="Operating Date" />
+        <input type="text" name="operating_date" placeholder="Operating Date" />
 
-        <input type="text" name="Airline Name" placeholder="Airline Name" />
+        <input type="text" name="airline_name" placeholder="Airline Name" />
 
-        <input type="number" name="Airline Number" placeholder="Airline Number" />
+        <input type="number" name="airline_number" placeholder="Airline Number" />
 
-        <input type="text" name="Depature Port" placeholder="Depature Port" />
+        <input type="text" name="depature_port" placeholder="Depature Port" />
 
-        <input type="text" name="Arrival Port" placeholder="Arrival Port" />
+        <input type="text" name="arrival_port" placeholder="Arrival Port" />
 
-        <input type="text" name="Depature Date and Time" placeholder="Depature Date and Time" />
+        <input type="text" name="depature_date_and_time" placeholder="Depature Date and Time" />
 
-        <input type="text" name="Arrival Date and Time" placeholder="Arrival Date and Time" />
+        <input type="text" name="arrival_date_and_time" placeholder="Arrival Date and Time" />
 
-        <input type="text" name="Flight Status" placeholder="Flight Status" />
+        <input type="text" name="flight_status" placeholder="Flight Status" />
 
-        <input type="text" name="Delay issue" placeholder="Delay issue" />
+        <input type="text" name="delay_issue" placeholder="Delay issue" />
 
-        <input type="text" name="Remarks" placeholder="Remarks" />
+        <input type="text" name="remarks" placeholder="Remarks" />
         <button type="submit">Update</button>
       </form>
     </div>

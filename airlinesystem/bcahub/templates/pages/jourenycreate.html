@@ -24,28 +24,17 @@
     <div class="container">
       <form action="{% url  'createjourney' %}" method="POST">
         {% csrf_token %}
-
-        <input type="number" placeholder="No" />
-
-        <input type="text" placeholder="Name" />
-
-        <input type="date" placeholder="D.O.B" />
-
-        <input type="text" placeholder="Father" />
-
-        <input type="text" placeholder="Passport" />
-
-        <input type="text" placeholder="Gender" />
-
-        <input type="text" placeholder="Flight Name" />
-
-        <input type="text" placeholder="Sector" />
-
-        <input type="datetime" placeholder="Depature Date and Time" />
-
-        <input type="datetime" placeholder="Arrival Date and Time" />
-
-        <input type="text" placeholder="Risk Status" />
+        <input type="number" name="no" placeholder="No" />
+        <input type="text" name="name" placeholder="Name" />
+        <input type="date" name="dob" placeholder="D.O.B" />
+        <input type="text" name="father" placeholder="Father" />
+        <input type="text" name="passport" placeholder="Passport" />
+        <input type="text" name="gender" placeholder="Gender" />
+        <input type="text" name="flight_name" placeholder="Flight Name" />
+        <input type="text" name="sector" placeholder="Sector" />
+        <input type="datetime" name="depature_date_and_time" placeholder="Depature Date and Time" />
+        <input type="datetime" name="arrival_date_and_time" placeholder="Arrival Date and Time" />
+        <input type="text" name="risk_status" placeholder="Risk Status" />
         <button type="submit">Create</button>
       </form>
     </div>
